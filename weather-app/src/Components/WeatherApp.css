@@ -103,7 +103,7 @@
 
 .temp {
     position: absolute;
-    top: 55%;
+    top: 52%;
     left: 50%;
     transform: translateX(-50%);
     font-size: 9rem;
@@ -111,6 +111,27 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: .5rem .5rem 1rem rgba(0,0,0,0.2);
+}
+
+.minMaxTemp {
+    width: 40%;
+    position: absolute;
+    bottom: 20rem;
+    font-size: 1rem;
+    display: flex;
+    column-gap: 1rem;
+    color: #484569;
+}
+
+.minMaxTemp > div{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255,255,255,0.2);
+    row-gap: 1.5rem;
+    padding: 0.2rem;
+    border-radius: 0.5rem;
 }
 
 .weather-date {

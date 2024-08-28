@@ -90,18 +90,18 @@ const WeatherApp = () => {
         'Sat']
 
     const months = [
-        'Jan',
-        'Feb', 
-        'Mar', 
-        'Apr', 
+        'January',
+        'February', 
+        'March', 
+        'April', 
         'May', 
-        'Jun', 
-        'Jul', 
-        'Aug', 
-        'Sep', 
-        'Oct', 
-        'Nov', 
-        'Dec'
+        'June', 
+        'July', 
+        'August', 
+        'September', 
+        'October', 
+        'November', 
+        'December'
     ]
 
     const dayOfWeek = daysOfWeek[currentDate.getDay()]
@@ -137,6 +137,12 @@ const WeatherApp = () => {
                         <img src={weatherImage} width={250} height={250} alt="sunny" />
                         <div className="weather-type">{data.weather ? data.weather[0].main : null}</div>
                         <div className="temp">{data.main ? `${Math.floor(data.main.temp)}°` : null}</div>
+                    </div>
+                    <div className="minMaxTemp">
+                        <div className="minTemp">Min: {data.main ? `${(data.main.temp_min)}°` : null}
+                        </div>
+                        <div className="maxTemp">Max: {data.main ? `${(data.main.temp_max)}°` : null}
+                        </div>
                     </div>
                     <div className="weather-date">
                         <p>{formattedDate}</p>
